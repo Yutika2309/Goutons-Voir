@@ -9,4 +9,6 @@ This virtual Wine expert mimics the expertise of an actual expert and can predic
 
 This endeavor not only helped me understand what goes into implementing an end-to-end ML project but also enlightened me about the chemical composition of Wines and that the alchemy of flavors plays a pivotal role in producing superlative Wines.
 
-You too could play around with numbers and see for yourself, as to what makes a good Wine . Cheers!!! 🍷 
+You too could play around with numbers and see for yourself, as to what makes a good Wine. 
+
+Cheers!!! 🍷 
