@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF8">
+        <meta name="viewport" content="width=device-width, intial-scale= 1.0" >
+        <link rel="icon" type="image/png" href="/static/img/favicon.ico" sizes="96x96">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Cousine&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.banner{
+  background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url("/static/img/red_wine_bg.png");
+  background-size: cover;
+  background-position:center;
+  height:calc(100vh); 
+  width: 100%;
+  margin:0;
+  padding:0;
+  text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+  0px -4px 10px rgba(255,255,255,0.3);
+  position: absolute;
+}
+
+.navbar{
+  width: 85%;
+  margin: auto;
+  padding: 35px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+  0px -4px 10px rgba(255,255,255,0.3);
+}
+
+.logo{
+  width: 100px;
+  cursor: pointer;
+  text-align: left;  
+  height: 100px;
+}
+
+
+.navbar ul li{
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  filter: drop-shadow(0px 0px 10px white);
+}
+
+.navbar ul li a{
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  filter: drop-shadow(0px 0px 10px white);
+  word-spacing: 10px;
+}
+
+.message{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: left;
+  color: #fff;
+  font-size: 20px;
+  padding-left: 90px;
+  padding-top: 20px;
+ }
+
+.image{
+float: right; 
+padding-right: 180px;
+padding-top: 2%;
+filter: drop-shadow(0px 0px 10px white);
+}
+
+.banner form button{
+ font-family: 'Homemade Apple',cursive;
+  font-size: 15px;
+  align-items: center;
+  font-weight: bolder;
+  height: 50px;
+  width: 180px;
+  color: #fff;
+  background-color:#5f1024;
+  border-radius: 8px;
+  border: 2px solid #ffffff; 
+  text-align: center;
+  opacity: 1;
+  transition: 0.2s;
+}
+
+.banner button:active {
+  transform: scale(0.75);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: 50px 0;
+}
+
+.copyright{
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-size: 18px;
+  color: #fff;
+ }
+
+        </style>
+        <title> Goûtons Voir - About </title>
+    </head>   
+    <body>
+        <div class="banner" style="overflow: hidden;">
+            <div class="navbar">
+            <img src="/static/img/goutons_voir_logo.png" class="logo">
+                    <ul style="font-family:'Cinzel', serif;">
+                        <h3>
+                            <li>Developer profiles</li>
+                            <br>
+                            <li><a href="https://github.com/Yutika2309"><img src="/static/img/github.svg"></a></li>
+                            <li><a href="https://www.linkedin.com/in/yutika-rege/"><img src="/static/img/linkedin.svg"></a></li>
+                            <li><a href="https://twitter.com/YutikaRege"><img src="/static/img/twitter.svg"></a></li>
+                            <li><a href="https://www.facebook.com/profile.php?id=100073681083462"><img src="/static/img/facebook.svg"></a></li>
+                        </h3>
+                    </ul>
+            </div>
+          
+            <div class="message">
+                <div class="image">
+                <img src= "/static/img/grapes.png" alt="image" style="border-radius:25px"> 
+                </div>
+                <h1 style="font-family: 'Homemade Apple', cursive;">About</h1>
+                    <p style="font-family: 'Merriweather', serif;">
+                        Have you ever wondered what separates a good quality Wine from an average quality Wine ? 
+                        What goes in the Wine; giving it that tart, sweet and fruity taste ? 
+                        Introducing <b>Goûtons Voir<sup>©</sup></b> (an expression in French meaning: "Let's Taste"), 
+                        your virtual Wine Expert crafted specifically to predict thereby enhance the quality of the Wine.
+                      </p>
+                      <br>
+                      <p style="font-family: 'Merriweather', serif;"> 
+                        <b>Goûtons Voir<sup>©</sup></b> employs state-of-the-art Machine Learning and A.I. technologies
+                        to mimic the expertise of an actual Wine expert and predict the quality of a Wine 
+                        based on it's chemical composition. The concept of a virtual Wine expert came into existence 
+                        after combining the domain knowledge pertaining to Vinification with Data Science techniques.
+                      </p>  
+                      <br><br>
+                      <table>
+                        <tr>
+                            <td>
+                    <form action="{{ url_for('values')}}" method="POST">
+                    <button type="submit" class="btn btn-primary btn-block btn-large">Quality Predictor</button>
+                    </form>
+                            </td>
+                            <td>
+                    <form action="{{ url_for('home')}}" method="POST">
+                    <button type="submit" class="btn btn-primary btn-block btn-large">Home</button>
+                    </form>
+                            </td>
+                        </tr>
+                    </table>
+            </div>       
+                    
+        </div>
+        
+            </hr>
+    </body> 
+<span class="copyright" style="font-family: 'Cinzel',serif;">🍇 Goûtons Voir | ©  2022 Yutika Rege</span>
+ 
+    </html>

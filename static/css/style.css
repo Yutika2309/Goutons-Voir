@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    background-image: url("/static/img/red_wine_bg.png");
+    background-size:cover;
+    background-position:center;
+    height: calc(120vh); 
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+    0px -4px 10px rgba(255,255,255,0.3);
+    display: flex;
+    justify-content: center;
+    padding-top: 103px;
+}
+
+.prediction h1{
+    font-family: 'Homemade Apple',cursive; 
+    font-size: 40px;
+    color: #fff;
+    text-align: center; 
+  }
+
+.prediction form{
+    font-family: 'Homemade Apple',cursive; 
+    font-size: 40px;
+    color: #fff;
+    text-align: center; 
+}
+
+.output p{
+    font-family: 'Merriweather', serif; 
+    font-size: 40px;
+    color: #fff;
+    text-align: center; 
+}
+
+.prediction button{
+  font-family: 'Homemade Apple',cursive;
+  font-size: 20px;
+  align-items: center;
+  font-weight: bolder;
+  height: 50px;
+  width: 200px;
+  color: #fff;
+  background-color:#5f1024;
+  border-radius: 8px;
+  border: 2px solid #ffffff; 
+  text-align: center;
+  opacity: 0.70;
+  transition: 0.2s; 
+}
+
+.prediction button:active {
+  transform: scale(0.75);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.prediction button:hover {
+  opacity: 1
+}
+
+table{
+  margin-left: auto;
+  margin-right: auto;
+  border-spacing: 50px 50px;
+  background-color: #926a74;
+  opacity: 90%;
+  border-width: 1;
+  border-radius: 8px;
+  border-style:solid;
+  border-color: #fff;
+  width: 500px;
+}
+
+table input{
+  width: 250px;
+  height: 50px;
+}

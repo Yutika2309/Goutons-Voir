@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bad Wine</title>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/png" href="/static/img/favicon.ico" sizes="96x96">
+    </head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cousine&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+      body{
+            background-image: url("/static/img/bad_wine.jpg");
+            text-align: center;
+            background-size:cover;
+            background-position:center;
+            height: calc(120vh); 
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+            0px -4px 10px rgba(255,255,255,0.3);
+            display: flex;
+            justify-content: center;
+            padding-top: 103px;
+            color: #fff;
+        }
+    
+      .bad_wine h1{
+        font-size: 40px;
+      }
+
+      .bad_wine{
+          background-color: #926a74;
+          height: 650px;
+          width: 850px;
+          opacity: 90%;
+          border-radius: 8px;
+          border-style:solid;
+          border-color: #fff;
+      } 
+
+      form button{
+        font-family: 'Homemade Apple',cursive;
+        font-size: 20px;
+        align-items: center;
+        font-weight: bolder;
+        height: 100px;
+        width: 300px;
+        color: #fff;
+        background-color:#5f1024;
+        border-radius: 8px;
+        border: 2px solid #ffffff; 
+        text-align: center;
+        transition: 0.3s;
+      }
+
+      form button:active {
+        transform: scale(0.75);
+        box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+      }
+    </style>
+
+    <body>
+        <div class="bad_wine">
+            <h1 style="font-family: 'Homemade Apple', cursive;" >Results</h1>
+            <p style="font-family: 'Merriweather', sans-serif;"> Goûtons Voir<sup>©</sup> has classified your Wine as being of</p>
+            <p style="font-family: 'Merriweather', sans-serif; font-size: 35px;"><b> Inferior Quality.</b></p>
+            <p style="font-family: 'Merriweather', sans-serif;"> Your Wine does not have the requisite flavour components.</p>
+            <a href = "https://www.wineryon.com/en/keys-to-know-a-good-wine/" style = "font-family: 'Merriweather', sans-serif;"> Click here to get tips on how to identify a good Wine</a>
+            <br>
+                <br>
+            <b><p style="font-family: 'Merriweather', sans-serif; font-size: 30px;"> Santé!</p></b>    
+            <br>
+            <form action="{{ url_for('home')}}" method="POST">
+                <button type="submit" class="btn btn-primary btn-block btn-large">Go back to homepage</button>
+            </form>
+        </div>
+    </body>
+</html>

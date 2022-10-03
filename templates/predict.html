@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html >
+    <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="icon" type="image/png" href="/static/img/favicon.ico" sizes="96x96">
+    <title>Goûtons Voir - Predictor</title>  
+        </head>
+
+            <body>
+                <div class="prediction">
+                    <h1>Red Wine Quality Prediction</h1>
+                    <table>
+                    <form action="{{ url_for('predict')}}" method="POST">
+                        <tr>
+                            <td>
+                        <input type="text" name="Fixed Acidity" placeholder="fixed acidity" required="required" />
+                           </td>
+                            <td>
+                        <input type="text" name="Volatile Acidity" placeholder="volatile acidity" required="required" />
+                           </td>
+                        </tr>
+                        <tr>
+                            <td>
+                        <input type="text" name="Citric Acid" placeholder="citric acidity" required="required" />
+                            </td>
+                            <td>
+                        <input type="text" name="Residual Sugar" placeholder="residual sugar" required="required" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                        <input type="text" name="Chlorides" placeholder="chlorides" required="required" />
+                            </td>
+                            <td>
+                        <input type="text" name="Free Sulfur Dioxide" placeholder="free sulfur dioxide" required="required" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                        <input type="text" name="Total Sulfur Dioxide" placeholder="total sulfur dioxide" required="required" />
+                            </td>
+                            <td>
+                        <input type="text" name="Density" placeholder="density" required="required" />
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                        <input type="text" name="pH" placeholder="ph" required="required" />
+                            </td>
+                            <td>
+                        <input type="text" name="Sulfates" placeholder="sulfates" required="required" />
+                            </td>
+                        <tr>
+                            <td>
+                        <input type="text" name="Alcohol" placeholder="alcohol percentage" required="required" />
+                            </td>
+                            <td>
+                        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+                            </td>
+                        </tr>
+                    </form>
+                    </table>
+                   <br>
+                   <br>
+                   <div class="output">
+                   <p>{{ prediction_text }}</p>
+                  </div>
+                </div>
+
+            </body>
+            
+    </html>

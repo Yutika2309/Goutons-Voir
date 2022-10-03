@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF8">
+        <meta name="viewport" content="width=device-width, intial-scale= 1.0" >
+        <link rel="icon" type="image/png" href="/static/img/favicon.ico" sizes="96x96">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Cousine&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.banner{
+  background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url("/static/img/red_wine_bg.png");
+  background-size: cover;
+  background-position:center;
+  height:calc(100vh); 
+  width: 100%;
+  margin:0;
+  padding:0;
+  text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+  0px -4px 10px rgba(255,255,255,0.3);
+  position: absolute;
+  justify-content: center;
+  text-align: center; 
+  padding-top: 20px;
+}
+
+.banner form button{
+ font-family: 'Homemade Apple',cursive;
+  font-size: 15px;
+  align-items: center;
+  font-weight: bolder;
+  height: 50px;
+  width: 180px;
+  color: #fff;
+  background-color:#5f1024;
+  border-radius: 8px;
+  border: 2px solid #ffffff; 
+  text-align: center;
+  opacity: 1;
+  transition: 0.2s;
+}
+
+.banner button:active {
+  transform: scale(0.75);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: 50px 0;
+}
+
+.copyright{
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-size: 18px;
+  color: #fff;
+ }
+        </style>
+
+        <title> Goûtons Voir - Home </title>
+
+    </head>   
+    
+    <body>
+    <div class = "banner">
+            <h1 style="font-family: 'Homemade Apple',cursive; color: #fff; font-size: 60px;"> Welcome to</h1>
+            <br> <br>
+            <img src="/static/img/goutons_voir_logo.png" class="logo"> 
+            <br> <br> <br> <br>
+            <table>
+                <tr>
+                    <td>
+            <form action="{{ url_for('values')}}" method="POST">
+            <button type="submit" class="btn btn-primary btn-block btn-large">Quality Predictor</button>
+            </form>
+                    </td>
+                    <td>
+            <form action="{{ url_for('about')}}" method="POST">
+            <button type="submit" class="btn btn-primary btn-block btn-large">About</button>
+            </form>
+                    </td>
+                </tr>
+            </table>
+    </div>
+    </body> 
+<span class="copyright" style="font-family: 'Cinzel',serif;">🍇 Goûtons Voir | ©  2022 Yutika Rege</span>
+ 
+    </html>
