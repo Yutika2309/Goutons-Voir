@@ -20,13 +20,38 @@
   background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url("/static/img/red_wine_bg.png");
   background-size: cover;
   background-position:center;
-  height:calc(100vh); 
-  width: 100%;
+  /*height:calc(100vh);*/ 
+  min-width: 100%;
+  min-height: 100vh;
+  overflow: auto;
   margin:0;
   padding:0;
   text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
   0px -4px 10px rgba(255,255,255,0.3);
   position: absolute;
+  justify-content: center;
+  text-align: center; 
+}
+
+.banner form button{
+ font-family: 'Homemade Apple',cursive;
+  font-size: 15px;
+  align-items: center;
+  font-weight: bolder;
+  height: 50px;
+  width: 180px;
+  color: #fff;
+  background-color:#5f1024;
+  border-radius: 8px;
+  border: 2px solid #ffffff; 
+  text-align: center;
+  opacity: 1;
+  transition: 0.2s;
+}
+
+.banner button:active {
+  transform: scale(0.75);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
 .navbar{
@@ -65,44 +90,26 @@
   word-spacing: 10px;
 }
 
-.message{
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  text-align: left;
-  color: #fff;
-  font-size: 20px;
-  padding-left: 90px;
-  padding-top: 20px;
- }
-
-.image{
-float: right; 
-padding-right: 180px;
-padding-top: 2%;
-filter: drop-shadow(0px 0px 10px white);
+p{
+    background-color: #926a74;
+    opacity: 80%;
+    border-radius: 8px;
+    border: #fff;
+    border-width: 2px;
+    border-style: ridge;
+    color: #fff;
+    align-items: center;
+    padding-top: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    width: 500px;
 }
 
-.banner form button{
- font-family: 'Homemade Apple',cursive;
-  font-size: 15px;
-  align-items: center;
-  font-weight: bolder;
-  height: 50px;
-  width: 180px;
-  color: #fff;
-  background-color:#5f1024;
-  border-radius: 8px;
-  border: 2px solid #ffffff; 
-  text-align: center;
-  opacity: 1;
-  transition: 0.2s;
-}
-
-.banner button:active {
-  transform: scale(0.75);
-  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+.about{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 table{
@@ -112,18 +119,39 @@ table{
 }
 
 .copyright{
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
   font-size: 18px;
   color: #fff;
+  align-items: left;
  }
 
-        </style>
-        <title> Goûtons Voir - About </title>
+ @media only screen and (max-width: 480px) {
+  p {
+    width: 50%;
+  }
+ 
+  .banner{
+  position: relative;
+  padding-bottom: calc(var(--aspect-ratio, .5625) * 100%);
+  height: 0;
+  font-size: 70%;
+  }
+
+  .banner form button{
+    position: relative;
+    height: 70%;
+    width: 100%;
+    font-size: 60%;
+  }
+
+}
+    </style>
+
+<title> Goûtons Voir - About </title>
+
     </head>   
+    
     <body>
-        <div class="banner" style="overflow: hidden;">
+        <div class="banner" style="overflow:auto">
             <div class="navbar">
             <img src="/static/img/goutons_voir_logo.png" class="logo">
                     <ul style="font-family:'Cinzel', serif;">
@@ -137,46 +165,43 @@ table{
                         </h3>
                     </ul>
             </div>
-          
-            <div class="message">
-                <div class="image">
-                <img src= "/static/img/grapes.png" alt="image" style="border-radius:25px"> 
-                </div>
-                <h1 style="font-family: 'Homemade Apple', cursive;">About</h1>
-                    <p style="font-family: 'Merriweather', serif;">
-                        Have you ever wondered what separates a good quality Wine from an average quality Wine ? 
-                        What goes in the Wine; giving it that tart, sweet and fruity taste ? 
-                        Introducing <b>Goûtons Voir<sup>©</sup></b> (an expression in French meaning: "Let's Taste"), 
-                        your virtual Wine Expert crafted specifically to predict thereby enhance the quality of the Wine.
-                      </p>
-                      <br>
-                      <p style="font-family: 'Merriweather', serif;"> 
-                        <b>Goûtons Voir<sup>©</sup></b> employs state-of-the-art Machine Learning and A.I. technologies
-                        to mimic the expertise of an actual Wine expert and predict the quality of a Wine 
-                        based on it's chemical composition. The concept of a virtual Wine expert came into existence 
-                        after combining the domain knowledge pertaining to Vinification with Data Science techniques.
-                      </p>  
-                      <br><br>
-                      <table>
-                        <tr>
-                            <td>
-                    <form action="{{ url_for('values')}}" method="POST">
-                    <button type="submit" class="btn btn-primary btn-block btn-large">Quality Predictor</button>
-                    </form>
-                            </td>
-                            <td>
-                    <form action="{{ url_for('home')}}" method="POST">
-                    <button type="submit" class="btn btn-primary btn-block btn-large">Home</button>
-                    </form>
-                            </td>
-                        </tr>
-                    </table>
-            </div>       
-                    
-        </div>
-        
-            </hr>
-    </body> 
-<span class="copyright" style="font-family: 'Cinzel',serif;">🍇 Goûtons Voir | ©  2022 Yutika Rege</span>
+            <br><br><br><br>
+            <h1 style="font-family: 'Homemade Apple',cursive; color: #fff; font-size: 60px;"> About</h1>
+            <br> <br>
+            <div class="about">
+            <p style="font-family: 'Merriweather', serif;">
+                Have you ever wondered what separates a good quality Wine from an average quality Wine? 
+                What goes in the Wine; giving it that tart, sweet and fruity taste ? 
+                Introducing <b>Goûtons Voir<sup>©</sup></b> (an expression in French meaning: "Let's Taste"), 
+                your virtual Wine Expert crafted specifically to predict thereby enhance the quality of the Wine.
+              <br><br>  
+                <b>Goûtons Voir<sup>©</sup></b> employs state-of-the-art Machine Learning and A.I. technologies
+                to mimic the expertise of an actual Wine expert and predict the quality of a Wine 
+                based on it's chemical composition. The concept of a virtual Wine expert came into existence 
+                after combining the domain knowledge pertaining to Vinification with Data Science techniques.
+            </p>
+            </div> 
+            <br> <br> <br> <br>
+
+            <table>
+                <tr>
+                    <td>
+            <form action="{{ url_for('values')}}" method="POST">
+            <button type="submit" class="btn btn-primary btn-block btn-large">Quality Predictor</button>
+            </form>
+                    </td>
+                    <td>
+            <form action="{{ url_for('home')}}" method="POST">
+            <button type="submit" class="btn btn-primary btn-block btn-large">Home</button>
+            </form>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <span class="copyright" style="font-family: 'Cinzel',serif;">🍇 Goûtons Voir | ©  2022 Yutika Rege</span>
+    </div>
+    
  
+    </body> 
+
     </html>

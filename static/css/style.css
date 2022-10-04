@@ -10,18 +10,25 @@
 }
 
 body{
-    background-image: url("/static/img/red_wine_bg.png");
-    background-size:cover;
-    background-position:center;
-    height: calc(120vh); 
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
-    0px -4px 10px rgba(255,255,255,0.3);
-    display: flex;
-    justify-content: center;
-    padding-top: 103px;
+  background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url("/static/img/red_wine_bg.png");
+  background-size: cover;
+  background-position:center;
+  /*height:calc(100vh);*/ 
+  min-width: 100%;
+  min-height: 100vh;
+  overflow: auto;
+  margin:0;
+  padding:0;
+  text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+  0px -4px 10px rgba(255,255,255,0.3);
+  position: absolute;
+  justify-content: center;
+  text-align: center; 
+  padding-top: 20px;
+  background-repeat: no-repeat;
+  position: relative;
+  padding-bottom: calc(var(--aspect-ratio, .5625) * 100%);
+
 }
 
 .prediction h1{
@@ -86,4 +93,15 @@ table{
 table input{
   width: 250px;
   height: 50px;
+}
+
+@media only screen and (max-width: 480px) {
+  body img {
+    width: 50%;
+  }
+
+  .prediction form{
+    width: 70%
+  }
+  
 }

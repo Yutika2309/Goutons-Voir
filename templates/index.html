@@ -20,8 +20,10 @@
   background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url("/static/img/red_wine_bg.png");
   background-size: cover;
   background-position:center;
-  height:calc(100vh); 
-  width: 100%;
+  /*height:calc(100vh);*/ 
+  min-width: 100%;
+  min-height: 100vh;
+  overflow: auto;
   margin:0;
   padding:0;
   text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
@@ -60,12 +62,32 @@ table{
 }
 
 .copyright{
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
   font-size: 18px;
   color: #fff;
+  align-items: left;
  }
+
+ @media only screen and (max-width: 480px) {
+  img {
+    width: 50%;
+  }
+ 
+  .banner{
+  position: relative;
+  padding-bottom: calc(var(--aspect-ratio, .5625) * 100%);
+  height: 0;
+  font-size: 70%;
+  }
+
+  .banner form button{
+    position: relative;
+    height: 70%;
+    width: 100%;
+    font-size: 60%;
+  }
+
+}
+
         </style>
 
         <title> Goûtons Voir - Home </title>
@@ -92,8 +114,11 @@ table{
                     </td>
                 </tr>
             </table>
+            <br>
+            <span class="copyright" style="font-family: 'Cinzel',serif;">🍇 Goûtons Voir | ©  2022 Yutika Rege</span>
     </div>
-    </body> 
-<span class="copyright" style="font-family: 'Cinzel',serif;">🍇 Goûtons Voir | ©  2022 Yutika Rege</span>
+    
  
+    </body> 
+
     </html>
