@@ -16,3 +16,20 @@ Cheers!!! 🍷
 ★ Model: Logistic Regression (based on model's ability to generalize the training and testing data)
 
 ★ Accuracy: 75% (after preprocessing and hyperparameter tuning)
+
+
+## Web app images 
+
+### Home page:
+
+![homepage](https://user-images.githubusercontent.com/61589893/205845397-3bbfad4c-a5e2-46c4-80f4-34f26a6884b8.jpg)
+
+## About page:
+![about page](https://user-images.githubusercontent.com/61589893/205845352-c8508784-9915-4d8f-8ad3-bceb6d934941.jpg)
+
+## Input page:
+![inputs page](https://user-images.githubusercontent.com/61589893/205845489-d25fa9e1-ee25-4fd0-9917-26eca0d2bdfb.jpg)
+
+## Sample output:
+![sample output ](https://user-images.githubusercontent.com/61589893/205845573-cd61f56a-6358-4433-b93d-c3323b967e01.jpg)
+
